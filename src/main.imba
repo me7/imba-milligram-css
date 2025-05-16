@@ -3,7 +3,8 @@ css
 	.r all:revert @hover:revert
 	html fs:62.5% bs:border-box
 	body ff:'Roboto' fw:300 lh:1.6 fs:1.6em ls:0.01em m:0
-	h1,h2,h3,h4,h5,h6 fw:300 ls:-.1rem mb:1rem mt:0
+	.main maw:80ch p:3em 1em m:auto
+	h1,h2,h3,h4,h5,h6 fw:300 ls:-.1rem mb:0
 	h1 fs:4.6rem lh:1.2
 	h2 fs:3.6rem lh:1.25
 	h3 fs:2.8rem lh:1.3
@@ -18,17 +19,20 @@ css
 	ul list-style:circle
 	input, textarea, select rd:2 h:3rem ol:none bd:1px hue2 @focus:2px hue6
 	textarea mih:6.5rem
-	label, legend fs:1.6rem mb:.5rem ml:.5rem
+	label, legend fs:1.6rem
 	table w:100% border-spacing:0 ta:left overflow-x:auto
+	tr@nth-of-type(even) bg:hue1
 	td, th bdb:.1rem hue4 p:4 6
 		&:first-child pl:0
 		&:last-child pr:0
-	p mt:0
+	p m:0
 
 tag App
-	<self [d:vcc g:2 hue:orange c:333 bg:warm1]>
+	<self.main [d:vcc g:2 hue:orange c:333]>
 		for i in [1...7]
 			<h{i}> "Heading {i}"
+			<p> "This is paragraph 1"
+			<p> "This is paragraph 2"
 		<button.r> "Button"
 		<button> "Default Button"
 		<button [hue:amber]> "Amber Button"
